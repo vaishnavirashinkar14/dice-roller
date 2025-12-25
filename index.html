@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="dice.png" alt="" id="dice" height="100px" />
+    <br> <br>
+    <button type="button" onclick="rollDice()">Roll The Dice</button>
+
+    <script>
+        const diceImg = document.getElementById("dice");
+        function rollDice() {
+            const min = 1;
+            const max = 7;
+            const randomNumber = Math.floor(Math.random() * (max - min)) + min;
+            if (randomNumber == 1) {
+                diceImg.src = "one.png";
+            }
+            else if (randomNumber == 2) {
+                diceImg.src = "two.png";
+            }
+            else if (randomNumber == 3) {
+                diceImg.src = "three.png";
+            }
+            else if (randomNumber == 4) {
+                diceImg.src = "four.png";
+            }
+            else if (randomNumber == 5) {
+                diceImg.src = "five.png";
+            }
+            else {
+                diceImg.src = "six.png";
+            }
+        }
+    </script>
+</body>
+</html>
